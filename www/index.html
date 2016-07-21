@@ -8,7 +8,7 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-      
+
 
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -29,11 +29,11 @@
 
     <!-- Config file for the main app -->
     <script src="js/app.config.js"></script>
-    
+
     <!-- Controller for main app-->
     <script src="js/app.controller.js"></script>
 
-   
+
   </head>
   <body ng-app="GymFlow" ng-controller="appCtrl as vm" ng-init="vm.getTasks()">
 
@@ -59,7 +59,7 @@
               <div class="item tabs tabs-secondary tabs-icon-left">
                   <span class="item item-checkbox">
                       <label class="checkbox">
-                          <input type="checkbox" ng-model="task.completed" ng-click="vm.completeTask($index)">
+                          <input type="checkbox" ng-model="vm.task.completed" ng-click="vm.completeTask($index)">
                       </label>
                   </span>
                   <a class="tab-item assertive" ng-click="vm.removeTask($index)">
@@ -82,16 +82,16 @@
                 <form ng-submit="vm.createTask()">
                     <div class="list list-inset">
                         <label class="item item-input">
-                            <input ng-model="task.title" type="text" placeholder="Task title">
+                            <input ng-model="vm.task.title" type="text" placeholder="Task title">
                         </label>
                         <label class="item item-input">
-                            <textarea ng-model="task.content" rows="5" placeholder="Task content"></textarea>
+                            <textarea ng-model="vm.task.content" rows="5" placeholder="Task content"></textarea>
                         </label>
                         <ul class="list">
                             <li class="item item-toggle">
                                 Completed?
                                 <label class="toggle toggle-balanced">
-                                    <input type="checkbox" ng-model="task.completed">
+                                    <input type="checkbox" ng-model="vm.task.completed">
                                    <div class="track">
                                         <div class="handle"></div>
                                     </div>

@@ -1,4 +1,4 @@
-app.controller('appCtrl', function ($scope, $ionicModal, localStorageService) { 
+app.controller('appCtrl', function ($scope, $ionicModal, localStorageService) {
     var vm = this;
     var taskData = 'task';
     vm.tasks = [];
@@ -27,7 +27,7 @@ app.controller('appCtrl', function ($scope, $ionicModal, localStorageService) {
         } else {
             vm.tasks = [];
         }
-    }
+    };
     vm.createTask = function () {
         //creates a new task
         vm.tasks.push(vm.task);
@@ -35,18 +35,18 @@ app.controller('appCtrl', function ($scope, $ionicModal, localStorageService) {
         vm.task = {};
         //close new task modal
         vm.newTaskModal.hide();
-    }
+    };
     vm.removeTask = function (index) {
         //removes a task
         vm.tasks.splice(index, 1);
         localStorageService.set(taskData, vm.tasks);
-    }
+    };
     vm.completeTask = function (index) {
         //updates a task as completed
         if (index !== -1) {
-            vm.tasks[index].completed = true; 
-        } 
+            vm.tasks[index].completed = true;
+        }
 
-        localStorageService.set(taskData, vm.tasks); 
+        localStorageService.set(taskData, vm.tasks);
     }
-})
+});
