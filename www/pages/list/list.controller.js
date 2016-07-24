@@ -14,4 +14,7 @@ app.controller('ListCtrl', function (Items) {
             });
         }
     };
+    vm.removeItem = function (index) {
+        vm.items.$remove(index);
+    }
 });

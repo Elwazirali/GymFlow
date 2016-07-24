@@ -9,6 +9,7 @@
         <ion-list>
             <ion-item ng-repeat="item in vm.items">
                 {{item.name}}
+                <button class="button button-assertive" ng-click="vm.removeItem($index)">Remove item</button>
             </ion-item>
         </ion-list>
     </ion-content>
