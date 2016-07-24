@@ -1,6 +1,17 @@
 /**
- * Created by Ali on 2016-07-24.
+ * Created by Saad on 2016-07-24.
  */
-app.controller('listCtrl', function () {
-
+app.controller('ListCtrl', function (Items) {
+    console.log(Items);
+    var vm = this;
+    vm.items = Items;
+    console.log(vm.items);
+    vm.addItem = function () {
+        var name = prompt("What do you need to buy?");
+        if (name) {
+            vm.items.$add({
+                "name": name
+            });
+        }
+    };
 });

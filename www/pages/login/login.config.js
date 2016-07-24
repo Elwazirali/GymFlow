@@ -9,5 +9,5 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'pages/login/login.tpl.html',
       controller: ''
     });
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/list');
 });

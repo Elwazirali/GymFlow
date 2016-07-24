@@ -1,12 +1,16 @@
-<ion-view title="Users" ng-controller="listCtrl as vm">
+<ion-view title="Users" ng-controller="ListCtrl as vm">
 
   <ion-header-bar class="bar bar-header bar-calm">
-    <h1 class="title"></h1>
+    <h1 class="title">List</h1>
+      <button class="button button-icon ion-plus" ng-click="vm.addItem()"></button>
   </ion-header-bar>
 
-  <br><br><br>
-  <h1>Login page</h1>
-
-
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="item in vm.items">
+                {{item.name}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
 
 </ion-view>
