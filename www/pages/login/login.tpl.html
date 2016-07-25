@@ -1,4 +1,4 @@
-<ion-view title="Users" ng-controller="profileCtrl as vm">
+<ion-view title="Users" ng-controller="LoginCtrl as vm">
 
   <ion-header-bar class="bar bar-header bar-calm">
     <h1 class="title"></h1>
@@ -23,7 +23,17 @@
     <button class="button button-royal">
       An awesome ToDo page
     </button>
+
+
+
   </a>
+
+
+  <button class="button button-royal" ng-click="vm.auth()">
+    create user
+  </button>
+  {{vm.test}}
+
 
 </ion-view>
 

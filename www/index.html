@@ -17,7 +17,19 @@
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
 
-   
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDc9fXz3BSjKooCNiO4nUWpROZ7LWNrkeI",
+        authDomain: "gymflow-d2401.firebaseapp.com",
+        databaseURL: "https://gymflow-d2401.firebaseio.com",
+        storageBucket: "gymflow-d2401.appspot.com",
+      };
+      firebase.initializeApp(config);
+    </script>
+
+
 
     <script src="app.js"></script>
 
@@ -36,6 +48,7 @@
 
     <script src="pages/login/login.controller.js"></script>
     <script src="pages/login/login.config.js"></script>
+    <script src="pages/login/login.serviceFactory.js"></script>
 
     <script src="pages/list/list.controller.js"></script>
     <script src="pages/list/list.config.js"></script>

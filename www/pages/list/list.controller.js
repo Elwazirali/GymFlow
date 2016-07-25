@@ -1,7 +1,7 @@
 /**
  * Created by Saad on 2016-07-24.
  */
-app.controller('ListCtrl', function (Items) {
+app.controller('ListCtrl', function ($ionicModal,Items) {
     console.log(Items);
     var vm = this;
     vm.items = Items;
