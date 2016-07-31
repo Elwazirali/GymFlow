@@ -9,8 +9,10 @@ app.factory('AddUser',function(){
 
 
   function createUser(){
+    var email = prompt("Email:");
+    var password = prompt("Password");
 
-    firebase.auth().createUserWithEmailAndPassword("saadsrahimi@gmail.com", "asdfasdfasdf").catch(function(error) {
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -18,5 +20,4 @@ app.factory('AddUser',function(){
     });
 
   }
-
 });

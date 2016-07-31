@@ -5,8 +5,11 @@
 app.controller('LoginCtrl',function(AddUser){
     var vm = this;
 
-    vm.auth = AddUser.createUser();
 
-  vm.test = "test";
+    vm.auth = function(){
+      AddUser.createUser();
+    };
+
+    vm.test = "test";
 
 });
