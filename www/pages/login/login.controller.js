@@ -9,7 +9,4 @@ app.controller('LoginCtrl',function(AddUser){
     vm.auth = function(){
       AddUser.createUser();
     };
-
-    vm.test = "test";
-
 });
