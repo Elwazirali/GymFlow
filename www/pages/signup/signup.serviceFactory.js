@@ -7,7 +7,7 @@ app.factory('NewUser', function () {
         create:create
     }
 
-    var create = function (credentials) {
+    function create(credentials) {
         var email = credentials.newEmail;
         var password = credentials.newPass;
 
@@ -15,6 +15,7 @@ app.factory('NewUser', function () {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
+            console.log(errorMessage);
             // ...
         });
     }

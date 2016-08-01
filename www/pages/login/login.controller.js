@@ -6,7 +6,6 @@ app.controller('LoginCtrl',function(userAuth,$rootScope,$state){
     var vm = this;
 
   $rootScope.$on('$stateChangeStart', function(event) {
-    alert(JSON.stringify($state));
     if(firebase.auth().currentUser){
       console.log(firebase.auth().currentUser);
     }else{

@@ -5,9 +5,9 @@
 app.controller('signupCtrl', function (NewUser) {
     var vm = this;
 
-    vm.create = function (vm) {
+    vm.create = function () {
         if (vm.newPass === vm.confPass) {
-            NewUser.create();
+            NewUser.create(vm);
         }
         else {
             vm.error = "Passwords do not match";
