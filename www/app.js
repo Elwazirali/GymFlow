@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'dependencies'
 var app = angular.module('GymFlow', ['ionic', 'LocalStorageModule', 'firebase'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform,$rootScope) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard

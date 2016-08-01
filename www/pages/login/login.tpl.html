@@ -9,12 +9,12 @@
 
   <label class="item item-input">
     <span class="input-label">Email</span>
-    <input type="email">
+    <input type="email" ng-model="vm.userEmail">
   </label>
 
   <label class="item item-input">
     <span class="input-label">password</span>
-    <input type="password">
+    <input type="password" ng-model="vm.userPassword">
   </label>
 
   <br><br><br>
@@ -31,5 +31,12 @@
         </button>
     </a>
 
+  <button class="button button-balanced" ng-click="vm.login()">
+    login
+  </button>
+
+  <button class="button button-royal" ng-click="vm.auth()">
+    create user
+  </button>
 </ion-view>
 
