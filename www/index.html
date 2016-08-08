@@ -38,13 +38,19 @@
 
     <!-- Local Storage API wrapped by Angular -->
     <script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="lib/chart.js/dist/Chart.min.js"></script>
+    <script src="lib/angular-chart.js/dist/angular-chart.min.js"></script>
+
 
     <script src="app.controller.js"></script>
     <script src="app.config.js"></script>
 
+    <script src="pages/menu/menu.config.js"></script>
+    <script src="pages/menu/menu.controller.js"></script>
 
     <script src="pages/profile/profile.controller.js"></script>
     <script src="pages/profile/profile.config.js"></script>
+    <link href="pages/profile/profile.css" rel="stylesheet">
 
     <script src="pages/login/login.controller.js"></script>
     <script src="pages/login/login.config.js"></script>
@@ -62,7 +68,6 @@
 
   </head>
   <body ng-app="GymFlow" ng-controller="appCtrl as vm" ng-init="vm.getTasks()">
-  <button ng-click="vm.signout()">sign out</button>
     <ion-nav-view></ion-nav-view>
   </body>
 </html>
