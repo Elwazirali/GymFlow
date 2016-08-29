@@ -1,52 +1,36 @@
 app.controller('profileCtrl', function ($ionicModal, $scope, localStorageService) {
     var vm = this;
-    var taskData = 'task';
-    vm.tasks = [];
 
-    vm.task = {};
+  /*vm.donutLabels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+  vm.donutData = [300, 500, 100];*/
 
-    $ionicModal.fromTemplateUrl('new-task-modal.html', {
-        scope: $scope, // vm used instead of $scope flakily
-        animation: 'slide-in-up'
-    }).then(function (modal) {
-        vm.newTaskModal = modal;
-    });
-
-    vm.openTaskModal = function () {
-        vm.newTaskModal.show();
-    };
-
-    vm.closeTaskModal = function () {
-        vm.newTaskModal.hide();
-    };
-
-    vm.getTasks = function () {
-        //fetches task from local storage
-        if (localStorageService.get(taskData)) {
-            vm.tasks = localStorageService.get(taskData);
-        } else {
-            vm.tasks = [];
+  $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
+  $scope.series = ['Series A', 'Series B'];
+  $scope.data = [
+    [65, 59, 80, 81, 56, 55, 40],
+    [28, 48, 40, 19, 86, 27, 90]
+  ];
+  $scope.onClick = function (points, evt) {
+    console.log(points, evt);
+  };
+  $scope.datasetOverride = [{ yAxisID: 'y-axis-1' }, { yAxisID: 'y-axis-2' }];
+  $scope.options = {
+    scales: {
+      yAxes: [
+        {
+          id: 'y-axis-1',
+          type: 'linear',
+          display: true,
+          position: 'left'
+        },
+        {
+          id: 'y-axis-2',
+          type: 'linear',
+          display: true,
+          position: 'right'
         }
-    };
-    vm.createTask = function () {
-        //creates a new task
-        vm.tasks.push(vm.task);
-        localStorageService.set(taskData, vm.tasks);
-        vm.task = {};
-        //close new task modal
-        vm.newTaskModal.hide();
-    };
-    vm.removeTask = function (index) {
-        //removes a task
-        vm.tasks.splice(index, 1);
-        localStorageService.set(taskData, vm.tasks);
-    };
-    vm.completeTask = function (index) {
-        //updates a task as completed
-        if (index !== -1) {
-            vm.tasks[index].completed = true;
-        }
-
-        localStorageService.set(taskData, vm.tasks);
+      ]
     }
+  };
+
 });

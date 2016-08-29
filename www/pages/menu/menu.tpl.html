@@ -1,10 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<ion-side-menus ng-controller="menuCtrl as vm">
 
-</body>
-</html>
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar bar-header bar-calm">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+  <ion-side-menu side="left">
+    <header class="bar bar-header bar-stable">
+      <h1 class="title">Left</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear href menu-close ui-sref="todo">
+          To Do
+        </ion-item>
+        <ion-item nav-clear href menu-close ui-sref="home">
+          Home
+        </ion-item>
+        <ion-item nav-clear href menu-close ui-sref="list">
+          Firebase List
+        </ion-item>
+        <ion-item nav-clear href menu-close ui-sref="profile">
+          Profile
+        </ion-item>
+        <br>
+        <button class="button button-energized" ng-click="vm.signout()">sign out</button>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

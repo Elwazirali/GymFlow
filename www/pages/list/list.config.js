@@ -4,8 +4,13 @@
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('list', {
+      parent:'menu',
       url: '/list',
-      templateUrl: 'pages/list/list.tpl.html',
+      views: {
+        'menuContent' :{
+          templateUrl: 'pages/list/list.tpl.html'
+        }
+      },
       controller: ''
     });
 });

@@ -13,14 +13,4 @@ app.controller('appCtrl', function ($scope, $ionicModal, $state, $rootScope) {
       event.preventDefault();
     }
   });
-
-
-  vm.signout = function(){
-    $state.go('login');
-    firebase.auth().signOut().then(function() {
-      // Sign-out successful.
-    }, function(error) {
-      // An error happened.
-    });
-  };
 });

@@ -1,7 +1,12 @@
 app.config(function ($stateProvider) {
-    $stateProvider.state('todo',{
-      url:'/todo',
-      templateUrl: 'pages/profile/profile.tpl.html',
-      controller:'profileCtrl as controller'
+    $stateProvider.state('profile',{
+      url:'/profile',
+      parent:'menu',
+      controller:'profileCtrl as controller',
+      views: {
+        'menuContent' :{
+          templateUrl: 'pages/profile/profile.tpl.html'
+        }
+      }
     });
 });

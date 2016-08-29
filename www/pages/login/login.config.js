@@ -6,8 +6,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('login', {
       url: '/login',
-      templateUrl: 'pages/login/login.tpl.html',
-      controller: ''
+      parent:'menu',
+      controller: '',
+      views: {
+        'menuContent' :{
+          templateUrl: 'pages/login/login.tpl.html',
+        }
+      }
     });
   $urlRouterProvider.otherwise('/login');
 });
