@@ -1,5 +1,4 @@
-# GymFlow
-A social network for meat-heads and athletes
+
 
 # GymFlow
 
@@ -18,4 +17,4 @@ Users are able to post questions, answer questions, and comment on posts related
 3. Chat capabilities for gym-specific usage to allow people that go to the same gym to interact and introduce each other or plan events (like an iron marathon)
 4. Ummm... Probably more stuff coming soon.
 
-*Note: App is currently up and running. User sign up and some functionality has been implemented. Feel free to create an account and check out the app. [Roman numeral four][2].*
+*Note: App is currently up and running. User sign up and some functionality has been implemented. Feel free to create an account and check out the app.
